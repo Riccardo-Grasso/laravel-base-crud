@@ -28,12 +28,20 @@
                 </div>
                 
             @endforeach --}}
-           
+      
         </div>
+        <div>
+            <ul>
+                @foreach ($comics as $comic)
+                <li style="color: white">{{$comic->title}}</li>
+                @endforeach
+            </ul>
+        </div>        
+    </div>
+    <div class="d-flex justify-content-center mb-3">
         <a href="{{route('comics.create')}}">
             <button type="button" class="btn btn-success">+ Add Comic</button>
         </a>
-        
     </div>
     <div class="row">
         <div class="load-more">
