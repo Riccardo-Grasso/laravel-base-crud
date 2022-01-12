@@ -1,0 +1,105 @@
+main {
+    background-color: $dc-dark-grey;
+
+    .jumbotron {
+        height: 400px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .comics-container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 50px $padding-left 20px;
+        
+        .current-series {
+            width: 250px;
+            height: 40px;
+            background-color: $dc-blue;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+            transform: translate(0, -50%);
+            left: 14%;
+        }
+
+        .comic-container {
+            flex-basis: calc((100% / 6) - $my-gap);
+
+            .img-container {
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            transition: transform .3s ease-out;                     
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .img-container:hover {
+                transform: translate(0, -20px);
+            }
+
+            .comic-title {
+                color: white;
+                font-size: 12px;
+                padding-top: 10px;
+            }
+        }
+
+        
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        /* padding-bottom: 20px; */
+
+        .load-more {
+            width: 150px;
+            height: 30px;
+            background-color: $dc-blue;
+            line-height: 30px;
+            text-align: center;
+    
+            a {
+                text-decoration: none;
+                color: white;
+                /* padding: 10px 20px; */
+            }
+        }
+    }
+
+    .bg-white {background-color: white;}
+
+    .bg-grey {background-color: #f6f6f6;}
+     
+     .detail-comic-img-container {
+        position: relative;
+        background-color: $dc-blue;
+        height: $section-height * 0.6;
+
+        .detail-comic-img {
+            position: absolute;
+            bottom: 20px;
+        }
+
+
+    }
+    .comic-data-container { 
+        .authors {
+        a {
+            text-decoration: none;
+        }
+        }   
+    }
+}
