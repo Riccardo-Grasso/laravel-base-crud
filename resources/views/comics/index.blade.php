@@ -28,7 +28,12 @@
                 </div>
                 
             @endforeach --}}
+           
         </div>
+        <a href="{{route('comics.create')}}">
+            <button type="button" class="btn btn-success">+ Add Comic</button>
+        </a>
+        
     </div>
     <div class="row">
         <div class="load-more">
