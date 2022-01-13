@@ -12,6 +12,11 @@
         </div>
         <div class="col">
             <p style="color: white">{{$comic->description}}</p>
+            <p style="color: white"><strong>Prezzo:</strong> {{ $comic->price }} $</p>
+            <p style="color: white"><strong>Serie: </strong> {{ $comic->series }}</p>
+            <p style="color: white"><strong>Uscita:</strong> {{ $comic->sale_date}}</p>
+            <p style="color: white"><strong>Tipo:</strong> {{ $comic->type}}</p>
+
         </div>
     </div>
     

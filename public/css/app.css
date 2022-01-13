@@ -116,7 +116,7 @@ main .comics-container .comic-container .img-container:hover {
   transform: translate(0, -20px);
 }
 
-main .comics-container .comic-container .comic-title {
+main .comics-container .comic-container .comic-text {
   color: white;
   font-size: 12px;
   padding-top: 10px;
@@ -140,6 +140,11 @@ main .row .load-more a {
   text-decoration: none;
   color: white;
   /* padding: 10px 20px; */
+}
+
+main .img-comic-container {
+  aspect-ratio: 1/1;
+  overflow: hidden;
 }
 
 main .bg-white {
