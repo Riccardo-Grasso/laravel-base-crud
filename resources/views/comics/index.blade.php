@@ -6,6 +6,9 @@
 <div class="container pb-3">
     <div class="comics-container">
         <div class="current-series">CURRENT SERIES</div>
+        @if(session("msg"))
+        <div class="alert alert-success">{{session("msg")}}</div>
+        @endif
             <div class="row row-cols-3 mt-3 w-100">                
                 @foreach($comics as $comic)
                         <div class="col">

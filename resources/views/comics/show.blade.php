@@ -5,7 +5,30 @@
 @section('content')
 
 <div class="container">
-    <h1 class="my-4" style="color: white">{{$comic->title}}</h1>
+    @if(session("msg"))
+    <div class="alert alert-success">{{session("msg")}}</div>
+    @endif
+    <div class="nav d-flex align-items-center justify-content-between">
+        <div>
+            <h1 class="my-4" style="color: white">{{$comic->title}}</h1>
+        </div>
+        <div class="d-flex">
+            <div class="me-3">
+                <a href="{{ route('comics.edit', $comic->id) }}" class="card-link"><button type="button" class="btn btn-primary">Modifica</button></a>
+            {{-- <a href="{{ route('comics.edit', $comic->id) }}" class="card-link"><button type="button" class="btn btn-danger">Elimina</button></a> --}}
+            </div>
+            <div>
+                <form action="{{ route("comics.destroy", $comic->id)}}" method="post">
+                    @csrf
+                    @method("delete")
+                    
+                    <button type="submit" class="btn btn-danger">Elimina</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    
     <div class="comic-container row">
         <div class="col">
             <img src="{{$comic->thumb}}" alt="comic-cover" class="w-100">
@@ -18,6 +41,7 @@
             <p style="color: white"><strong>Tipo:</strong> {{ $comic->type}}</p>
 
         </div>
+      
     </div>
     
 </div>
