@@ -1,0 +1,20 @@
+@extends('layouts.layout_default')
+
+@section('page-title', 'DC Comics - Dettagli #' . $comic->id)
+
+@section('content')
+
+<div class="container">
+    <h1 class="my-4" style="color: white">{{$comic->title}}</h1>
+    <div class="comic-container row">
+        <div class="col">
+            <img src="{{$comic->thumb}}" alt="comic-cover" class="w-100">
+        </div>
+        <div class="col">
+            <p style="color: white">{{$comic->description}}</p>
+        </div>
+    </div>
+    
+</div>
+    
+@endsection
