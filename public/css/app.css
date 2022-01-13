@@ -147,6 +147,10 @@ main .img-comic-container {
   overflow: hidden;
 }
 
+main .card-body {
+  height: 80px;
+}
+
 main .bg-white {
   background-color: white;
 }

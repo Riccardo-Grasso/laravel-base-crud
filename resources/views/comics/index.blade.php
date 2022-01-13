@@ -27,8 +27,15 @@
                                     <p class="card-text"><strong>Prezzo:</strong>  {{ $comic->price }}$</p>
                                     <p class="card-text"><strong>Serie: </strong> {{ $comic->series }}</p>
                                     <p class="card-text"><strong>Uscita:</strong> {{ $comic->sale_date }}</p>
-                                    <a href="{{ route('comics.show', $comic->id) }}" class="card-link">Dettagli</a>
-                                    <a href="{{ route('comics.edit', $comic->id) }}" class="card-link">Modifica</a>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <a href="{{ route('comics.show', $comic->id) }}" class="card-link text-decoration-none">Dettagli</a>
+                                            <a href="{{ route('comics.edit', $comic->id) }}" class="card-link text-decoration-none">Modifica</a>
+                                        </div>
+                                        
+                                        @include('partials.delete_btn')
+                                    </div>
+                                    
                                 </div>
 
                             </div>
@@ -55,7 +62,7 @@
     </div>
     <div class="d-flex justify-content-center mb-3">
         <a href="{{route('comics.create')}}">
-            <button type="button" class="btn btn-success">+ Add Comic</button>
+            <button type="button" class="btn btn-success">+ Add Comics</button>
         </a>
     </div>
     <div class="row">

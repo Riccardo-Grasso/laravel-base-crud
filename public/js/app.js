@@ -19380,6 +19380,21 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+window.addEventListener("DOMContentLoaded", function () {
+  var formsDelete = document.querySelectorAll(".form-delete");
+  formsDelete.forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); //const comicTitle = document.getElementById("comicTitle").innerText;
+
+      var conferma = confirm("Sei sicuro di voler eliminare questo elemento? L'operazione è irreversibile", "Si", "No");
+
+      if (conferma) {
+        form.submit();
+      }
+    });
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

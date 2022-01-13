@@ -83,7 +83,11 @@ main {
         aspect-ratio: 1 / 1;
         overflow: hidden;
     }
-    
+
+    .card-body {
+        height: 80px;
+    }
+
     .bg-white {background-color: white;}
 
     .bg-grey {background-color: #f6f6f6;}
